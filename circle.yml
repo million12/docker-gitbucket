@@ -1,0 +1,22 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - docker info && docker version
+
+test:
+  pre:
+    - docker build -t million12/gitbucket .
+
+  override:
+  # Start Gitbucket
+    - docker run -d -p 80:80 -p 443:443 --name gitbucket million12/gitbucket
+    - docker logs -f gitbucket | tee -a ${CIRCLE_ARTIFACTS}/gitbucket.log:
+          background: true
+    - while true; do if grep "Started ServerConnector" -a ${CIRCLE_ARTIFACTS}/gitbucket.log; then break; else sleep 1; fi done
+    # Check connection on port 80
+    - curl -sSLi --head http://127.0.0.1/ | grep "HTTP/1.1 200 OK"
+    # Check connection on port 443
+    - curl -sSLi --insecure --head https://127.0.0.1/ | grep "HTTP/1.1 200 OK"
