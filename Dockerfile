@@ -13,4 +13,4 @@ RUN \
 
 COPY container-files/ /
 
-EXPOSE 80 81 443
+EXPOSE 80 81 443 29418

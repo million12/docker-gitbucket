@@ -56,6 +56,7 @@ Eample output:
       --name gitbucket \
       -p 80:80 \
       -p 443:443 \
+      -p 29418:29418 \
       million12/gitbucket
 
 Mount data to host os and edit some variables.
@@ -65,6 +66,7 @@ Mount data to host os and edit some variables.
       --name gitbucket \
       -p 80:80 \
       -p 443:443 \
+      -p 29418:29418 \
       -e HOSTNAME=myhostanme.com \
       -e DATA_DIR=/my/custom/container/dir \
       -v /my/host/dir:/my/custom/container/dir \
@@ -74,10 +76,11 @@ Mount data to host os and edit some variables.
 
     docker build -t million12/gitbucket .
 
-### Access GitBucket web interface
+### Access GitBucket
 
 - HTTP: http://docker.ip
 - SSL/HTTP2: https://docker.ip
+- SSH through port `29418`
 
 **Default Login and Password is `root:root`**
 
@@ -113,4 +116,3 @@ Author: Przemyslaw Ozgo (<linux@ozgo.info>)
 ---
 
 **Sponsored by [Prototype Brewery](http://prototypebrewery.io/)** - the new prototyping tool for building highly-interactive prototypes of your website or web app. Built on top of [Neos CMS](https://www.neos.io/) and [Zurb Foundation](http://foundation.zurb.com/) framework.
-
