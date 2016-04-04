@@ -1,7 +1,7 @@
 FROM million12/nginx
 MAINTAINER Przemyslaw Ozgo linux@ozgo.info
 
-ENV GITBUCKET_VERSION=3.12 \
+ENV GITBUCKET_VERSION=3.13 \
     HOSTNAME=localhost \
     CONTEXTPATH="" \
     DATA_DIR=/data/gitbucket
