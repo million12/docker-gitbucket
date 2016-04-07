@@ -1,5 +1,7 @@
 ### GitBucket in Docker (Nginx/HTTP2)
 
+[![Join the chat at https://gitter.im/million12/docker-gitbucket](https://badges.gitter.im/million12/docker-gitbucket.svg)](https://gitter.im/million12/docker-gitbucket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/millio12/docker-bitbucket)
 [![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)
