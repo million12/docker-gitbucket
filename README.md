@@ -1,19 +1,20 @@
 ### GitBucket in Docker (Nginx/HTTP2)
 
-[![Join the chat at https://gitter.im/million12/docker-gitbucket](https://badges.gitter.im/million12/docker-gitbucket.svg)](https://gitter.im/million12/docker-gitbucket?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/millio12/docker-bitbucket)
 [![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)
 [![GitHub Forks](https://img.shields.io/github/forks/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)  
 [![Stars on Docker Hub](https://img.shields.io/docker/stars/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
 [![Pulls on Docker Hub](https://img.shields.io/docker/pulls/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)  
-[![Docker Layers](https://badge.imagelayers.io/million12/gitbucket:latest.svg)](https://hub.docker.com/r/million12/gitbucket)
+[![](https://images.microbadger.com/badges/image/million12/gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)
 
- [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/million12/docker-gitbucket/tree/master)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/million12/docker-gitbucket/tree/master)
 
 [Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server using [million12/nginx](https://hub.docker.com/r/million12/nginx/) docker image as base. (HTTP2 and HAProxy SSL termination ready.)
 
+### Versions
+
+* `polinux/gitbucket:latest` - [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
+* `polinux/gitbucket:4.10` - [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/4.10.svg)](https://circleci.com/gh/million12/docker-gitbucket)
 
 ### Environmental Variable
 
