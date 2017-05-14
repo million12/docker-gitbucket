@@ -11,10 +11,9 @@
 
 [Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server using [million12/nginx](https://hub.docker.com/r/million12/nginx/) docker image as base. (HTTP2 and HAProxy SSL termination ready.)
 
-### Versions
+### Build Status
 
-* `polinux/gitbucket:latest` - [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
-* `polinux/gitbucket:4.10` - [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/4.10.svg)](https://circleci.com/gh/million12/docker-gitbucket)
+* [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
 
 ### Environmental Variable
 
