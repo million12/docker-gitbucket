@@ -5,7 +5,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)  
 [![Stars on Docker Hub](https://img.shields.io/docker/stars/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
 [![Pulls on Docker Hub](https://img.shields.io/docker/pulls/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)  
-[![](https://images.microbadger.com/badges/version/million12/gitbucket:4.16.0.svg)](http://microbadger.com/images/polinux/gitlab-ce)  
+[![](https://images.microbadger.com/badges/version/million12/gitbucket:4.17.0.svg)](http://microbadger.com/images/polinux/gitlab-ce)  
 [![](https://images.microbadger.com/badges/image/million12/gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/million12/docker-gitbucket/tree/master)
