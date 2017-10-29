@@ -1,20 +1,18 @@
 ### GitBucket in Docker (Nginx/HTTP2)
 
-[![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)
-[![GitHub Forks](https://img.shields.io/github/forks/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket)  
-[![Stars on Docker Hub](https://img.shields.io/docker/stars/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
-[![Pulls on Docker Hub](https://img.shields.io/docker/pulls/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)  
-[![](https://images.microbadger.com/badges/version/million12/gitbucket:4.17.0.svg)](http://microbadger.com/images/polinux/gitlab-ce)  
-[![](https://images.microbadger.com/badges/image/million12/gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)
+[![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
+[![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)  
+[![Stars](https://img.shields.io/github/stars/million12/docker-gitbucket.svg?style=social&label=Stars)]()
+[![Fork](https://img.shields.io/github/forks/million12/docker-gitbucket.svg?style=social&label=Fork)]()  
+[![Docker Start](https://img.shields.io/docker/stars/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
+[![Docker Pulls](https://img.shields.io/docker/pulls/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
+[![Docker Auto](https://img.shields.io/docker/automated/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)  
+[![](https://img.shields.io/github/release/million12/docker-gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)
 
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/million12/docker-gitbucket/tree/master)
+Felling like supporting me in my projects use donate button. Thank You!  
+[![](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/POzgo)
 
 [Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server using [million12/nginx](https://hub.docker.com/r/million12/nginx/) docker image as base. (HTTP2 and HAProxy SSL termination ready.)
-
-### Build Status
-
-* [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
 
 ### Environmental Variable
 
