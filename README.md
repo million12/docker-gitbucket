@@ -1,4 +1,4 @@
-### GitBucket in Docker (Nginx/HTTP2)
+### GitBucket in Docker (Alpine with Supervisor)
 
 [![CircleCI Build Status](https://img.shields.io/circleci/project/million12/docker-gitbucket/master.svg)](https://circleci.com/gh/million12/docker-gitbucket)
 [![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)  
@@ -12,8 +12,8 @@
 Felling like supporting me in my projects use donate button. Thank You!  
 [![](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/POzgo)
 
-**NOTE: This image was refactored and stripped down to alpine version with Java 8 and Gitbucket**
-If users need `ssl` support please put it behind HAProxy or Nginex server. 
+**NOTE: This image was refactored and stripped down to alpine version with Java 8 and Gitbucket**  
+If users need `ssl` support please put it behind HAProxy or Nginx server. 
 
 [Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server based on Alpine Linux for lightweight 
 
@@ -51,7 +51,6 @@ Mount data to host os and edit some variables.
 ### Access GitBucket
 
 - HTTP: http://docker.ip
-- SSL/HTTP2: https://docker.ip
 - SSH through port `29418`
 
 **Default Login and Password is `root:root`**
@@ -81,10 +80,8 @@ History of an image and size of layers:
 docker history --no-trunc=true million12/gitbucket | tr -s ' ' | tail -n+2 | awk -F " ago " '{print $2}'
 ```
 
+---
+
 ## Author
 
 Author: Przemyslaw Ozgo (<linux@ozgo.info>)
-
----
-
-**Sponsored by [Prototype Brewery](http://prototypebrewery.io/)** - the new prototyping tool for building highly-interactive prototypes of your website or web app. Built on top of [Neos CMS](https://www.neos.io/) and [Zurb Foundation](http://foundation.zurb.com/) framework.
