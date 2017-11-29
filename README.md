@@ -4,10 +4,8 @@
 [![GitHub Open Issues](https://img.shields.io/github/issues/million12/docker-gitbucket.svg)](https://github.com/million12/docker-gitbucket/issues)  
 [![Stars](https://img.shields.io/github/stars/million12/docker-gitbucket.svg?style=social&label=Stars)]()
 [![Fork](https://img.shields.io/github/forks/million12/docker-gitbucket.svg?style=social&label=Fork)]()  
-[![Docker Start](https://img.shields.io/docker/stars/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
-[![Docker Pulls](https://img.shields.io/docker/pulls/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)
-[![Docker Auto](https://img.shields.io/docker/automated/million12/gitbucket.svg)](https://hub.docker.com/r/million12/gitbucket)  
-[![](https://img.shields.io/github/release/million12/docker-gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)
+[![](https://img.shields.io/github/release/million12/docker-gitbucket.svg)](http://microbadger.com/images/million12/gitbucket)  
+[![Docker build](http://dockeri.co/image/million12/gitbucket)](https://hub.docker.com/r/million12/gitbucket/)
 
 Felling like supporting me in my projects use donate button. Thank You!  
 [![](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/POzgo)
