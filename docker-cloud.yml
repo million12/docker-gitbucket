@@ -2,4 +2,3 @@ gitbucket:
   image: million12/gitbucket
   ports:
     - "80:80"
-    - "443:443"

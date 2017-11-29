@@ -12,7 +12,10 @@
 Felling like supporting me in my projects use donate button. Thank You!  
 [![](https://img.shields.io/badge/donate-PayPal-blue.svg)](https://www.paypal.me/POzgo)
 
-[Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server using [million12/nginx](https://hub.docker.com/r/million12/nginx/) docker image as base. (HTTP2 and HAProxy SSL termination ready.)
+**NOTE: This image was refactored and stripped down to alpine version with Java 8 and Gitbucket**
+If users need `ssl` support please put it behind HAProxy or Nginex server. 
+
+[Docker Image](https://registry.hub.docker.com/u/million12/gitbucket/) with GitBucket server based on Alpine Linux for lightweight 
 
 ### Environmental Variable
 
@@ -20,43 +23,12 @@ Felling like supporting me in my projects use donate button. Thank You!
 - `HOSTNAME` runtime variable `--host=`
 - `DATA_DIR` runtime variable `--gitbucket.home=`
 
-#### Nginx Features
-
-##### - HTTP/2 support
-Container is built with `http/2` support and by default it listens on port `443`.  
-Make sure you open it on `docker run`.  
-Port `81` is used by default for load balancing (`HAProxy`) ssl termination.
-
-##### - dummy SSL certificates
-The default *catch-all* vhost is configured to work on HTTPS as well.
-
-##### - error logging
-
-Nginx `error_log` is set to `stderr` and therefore Nginx log is available only via `docker logs [contaienr]`, together with supervisor logs.
-
-This is probably best approach if you'd like to source your logs from outside the container (e.g. via `docker logs` or CoreOS `journald`) and you don't want to worry about logging and log management inside your container.
-
-##### - graceful reload after config change
-
-Folders `/etc/nginx/` and `/data/conf/nginx/` are monitored for any config changes and, when they happen, Nginx is gracefully reloaded.
-
-##### - Nginx status page
-
-Nginx status page is configured under `/nginx_status` URL on the default vhost. Also see `STATUS_PAGE_ALLOWED_IP` env variable described below.
-Eample output:  
-
-	Active connections: 1
-	server accepts handled requests
-	11475 11475 13566
-	Reading: 0 Writing: 1 Waiting: 0
-
 ### Usage
 
     docker run \
       -d \
       --name gitbucket \
       -p 80:80 \
-      -p 443:443 \
       -p 29418:29418 \
       million12/gitbucket
 
@@ -66,7 +38,6 @@ Mount data to host os and edit some variables.
       -d \
       --name gitbucket \
       -p 80:80 \
-      -p 443:443 \
       -p 29418:29418 \
       -e HOSTNAME=myhostanme.com \
       -e DATA_DIR=/my/custom/container/dir \
