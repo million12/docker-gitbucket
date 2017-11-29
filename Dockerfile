@@ -1,17 +1,16 @@
-FROM million12/nginx
-MAINTAINER Przemyslaw Ozgo linux@ozgo.info
+FROM polinux/supervisor:alpine
 
-ENV GITBUCKET_VERSION=4.18.0 \
-    HOSTNAME=localhost \
+ENV GITBUCKET_VERSION="4.18.0" \
+    HOSTNAME="0.0.0.0" \
     CONTEXTPATH="" \
-    DATA_DIR=/data/gitbucket
+    DATA_DIR="/data/gitbucket"
 
 RUN \
-    rpm --rebuilddb && yum clean all && \
-    yum install -y java-1.8.0-openjdk wget && \
-    yum clean all && \
-    wget -L -O /opt/gitbucket.war https://github.com/gitbucket/gitbucket/releases/download/${GITBUCKET_VERSION}/gitbucket.war
+    apk add --update openjdk8 curl && \
+    rm -rf /var/cache/apk/* && \
+    mkdir -p /opt/ && \
+    curl -sL https://github.com/gitbucket/gitbucket/releases/download/${GITBUCKET_VERSION}/gitbucket.war -o /opt/gitbucket.war
 
 COPY container-files/ /
 
-EXPOSE 80 81 443 29418
+EXPOSE 8080 29418

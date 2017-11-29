@@ -8,26 +8,23 @@ dependencies:
 
 test:
   pre:
-    - docker pull million12/nginx
     - docker pull million12/gitbucket:4.0
     - docker build -t million12/gitbucket:circleci .
 
   override:
   # Start GitBucket 4.0 for migration of data purpose.
     - mkdir -p /home/ubuntu/git-server
-    - docker run -d -p 1080:80 -p 10443:443 --name gitbucket-4.0 -e DATA_DIR=/git-server -v /home/ubuntu/git-server:/git-server million12/gitbucket:4.0
+    - docker run -d -p 1080:80 --name gitbucket-4.0 -e DATA_DIR=/git-server -v /home/ubuntu/git-server:/git-server million12/gitbucket:4.0
     - docker logs -f gitbucket-4.0 | tee ${CIRCLE_ARTIFACTS}/gitbucket-4.0.log:
           background: true
     - while true; do if grep "Started ServerConnector" -a ${CIRCLE_ARTIFACTS}/gitbucket-4.0.log; then break; else sleep 1; fi done
-    # Check connection on port 80
+    # Check connection on port 1080
     - curl -sSLi --head http://127.0.0.1:1080/ | grep "HTTP/1.1 200 OK"
     - docker stop gitbucket-4.0
   # Start Gitbucket
-    - docker run -d -p 80:80 -p 443:443 --name gitbucket -e DATA_DIR=/git-server -v /home/ubuntu/git-server:/git-server million12/gitbucket:circleci
+    - docker run -d -p 8080:8080 --name gitbucket -e DATA_DIR=/git-server -v /home/ubuntu/git-server:/git-server million12/gitbucket:circleci
     - docker logs -f gitbucket | tee -a ${CIRCLE_ARTIFACTS}/gitbucket.log:
           background: true
     - while true; do if grep "Started ServerConnector" -a ${CIRCLE_ARTIFACTS}/gitbucket.log; then break; else sleep 1; fi done
     # Check connection on port 80
-    - curl -sSLi --head http://127.0.0.1/ | grep "HTTP/1.1 200 OK"
-    # Check connection on port 443
-    - curl -sSLi --insecure --head https://127.0.0.1/ | grep "HTTP/1.1 200 OK"
+    - curl -sSLi --head http://127.0.0.1:8080 | grep "HTTP/1.1 200 OK"
